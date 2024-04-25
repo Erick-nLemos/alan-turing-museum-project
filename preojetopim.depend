@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1695687373 source:c:\users\samar\onedrive\햞ea de trabalho\linguagem c\exercicios - apostila 2\preojetopim\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+
+1696031999 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.3\preojetopim\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+
+1696052841 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.4\preojetopim\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+
+1697902975 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.5 - teste\preojetopimteste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	<string.h>
+
+1697916829 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.6\preojetopimteste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	<string.h>
+
+1701012185 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.6 teste\preojetopimteste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<string.h>
+
+1701474055 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.8 teste\preojetopimteste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<string.h>
+
+1701690027 source:c:\users\toper\onedrive\햞ea de trabalho\preojetopim0.9 teste\preojetopimteste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<string.h>
+
