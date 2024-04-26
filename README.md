@@ -4,11 +4,13 @@
 
 ### Este projeto foite em grupo com 5 participantes.
 ### Responsáveis pelo desenvolvimento do Software:
-Erick do Nascimento Lemos - 
+Erick do Nascimento Lemos - https://www.linkedin.com/in/erick-nlemos/
+
 Samara Regina Siqueira Lima - https://www.linkedin.com/in/samara-lima-80537518b/
 
 ### Responsáveis pela documentação:
 Karina Adriana dos Santos Silva - https://www.linkedin.com/in/karina-adriana/
+
 Moisés Henrique Oliveira da Silva - https://www.linkedin.com/in/moises-henrique-b43078268/
 
 ### Responsável pelo mapeamento da infraestrutura de rede: 
