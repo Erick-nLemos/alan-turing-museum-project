@@ -1107,7 +1107,7 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
             linhaCol(17,30);
             printf("2- Consultar Cadastro\n");
             linhaCol(19,30);
-            printf("3- Alterar\n");
+            printf("3- Editar Cadastro\n");
             linhaCol(21,30);
             printf("4- Excluir\n");
             linhaCol(23,30);
@@ -1240,7 +1240,7 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                 boxMenu();
                 box(10,20,28,105);
                 linhaCol(12,44);
-                printf("Alterar Cadastro\n");
+                printf("Editar Cadastro\n");
                 linhaCol(19,30);
                 printf("[Digite o numero do cadastro]");
                 linhaCol(19,70);
@@ -1252,7 +1252,7 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                     system("cls");
                     boxMenu();
                     linhaCol(12,44);
-                    printf("Alterar Cadastro - Cliente %d\n", indiceCad);
+                    printf("Editar Cadastro - Cliente %d\n", indiceCad);
                     box(10,20,28,105);
                     linhaCol(15,30);
                     printf("1-Nome\n");
@@ -1273,7 +1273,7 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         system("cls");
                         boxMenu();
                         linhaCol(12,44);
-                        printf("Alterar Cadastro - Cliente %d\n",indiceCad);
+                        printf("Editar Cadastro - Cliente %d\n",indiceCad);
                         box(10,20,28,105);
                         linhaCol(15,30);
                         printf("Alterar Nome do Cliente: ");
@@ -1299,10 +1299,10 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         system("cls");
                         boxMenu();
                         linhaCol(12,44);
-                        printf("Alterar Cadastro - Cliente %d\n",indiceCad);
+                        printf("Editar Cadastro - Cliente %d\n",indiceCad);
                         box(10,20,28,105);
                         linhaCol(15,30);
-                        printf("Alterar Telefone do Cliente: ");
+                        printf("Editar Telefone do Cliente: ");
                         fgets(CadC[indiceCad-1].telefone, sizeof(CadC[indiceCad-1].telefone), stdin);
                         CadC[indiceCad-1].telefone[strcspn(CadC[indiceCad-1].telefone, "\n")] = '\0';
                         linhaCol(17,30);
@@ -1324,10 +1324,10 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         system("cls");
                         boxMenu();
                         linhaCol(12,44);
-                        printf("Alterar Cadastro - Cliente %d\n",indiceCad);
+                        printf("Editar Cadastro - Cliente %d\n",indiceCad);
                         box(10,20,28,105);
                         linhaCol(15,30);
-                        printf("Alterar CPF do Cliente: ");
+                        printf("Editar CPF do Cliente: ");
                         fgets(CadC[indiceCad-1].cpf, sizeof(CadC[indiceCad-1].cpf), stdin);
                         CadC[indiceCad-1].cpf[strcspn(CadC[indiceCad-1].cpf, "\n")] = '\0';
                         linhaCol(17,30);
@@ -1349,10 +1349,10 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         system("cls");
                         boxMenu();
                         linhaCol(12,44);
-                        printf("Alterar Cadastro - Cliente %d\n",indiceCad);
+                        printf("Editar Cadastro - Cliente %d\n",indiceCad);
                         box(10,20,28,105);
                         linhaCol(15,30);
-                        printf("Alterar Endereço do Cliente: ");
+                        printf("Editar Endereço do Cliente: ");
                         fgets(CadC[indiceCad-1].ender, sizeof(CadC[indiceCad-1].ender), stdin);
                         CadC[indiceCad-1].ender[strcspn(CadC[indiceCad-1].ender, "\n")] = '\0';
                         linhaCol(17,30);
@@ -1374,7 +1374,7 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         system("cls");
                         boxMenu();
                         linhaCol(12,44);
-                        printf("Alterar Cadastro - Cliente%d\n",indiceCad);
+                        printf("Editar Cadastro - Cliente%d\n",indiceCad);
                         box(10,20,28,105);
                         linhaCol(15,30);
                         printf("E-mail do Cliente: ");
@@ -1419,45 +1419,18 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                         printf("Excluir Cadastro - Cliente %d\n", indiceCad);
                         box(10,20,28,105);
                         linhaCol(14,30);
-                        printf("1-Nome");
+                        printf("1-Telefone");
                         linhaCol(16,30);
-                        printf("2-Telefone");
+                        printf("2-Endereco");
                         linhaCol(18,30);
-                        printf("3-CPF");
-                        linhaCol(20,30);
-                        printf("4-Endereco");
-                        linhaCol(22,30);
-                        printf("5-Email");
-                        linhaCol(24,30);
-                        printf("6-Excluir Todos os Dados\n\n");
+                        printf("3-Email");
                         linhaCol(26,30);
-                        printf("Qual Opcao Voce Deseja Excluir? \n");
+                        printf("Qual Opcao Voce Deseja Excluir? ");
                         scanf("%d", &opcaoExcluir);
 
                         switch(opcaoExcluir){
 
                         case 1:
-                            system("cls");
-                            boxMenu();
-                            box(13,28,19,97);
-                            linhaCol(16,43);
-                            // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
-                            memset(&CadC[indiceCad-1].nome,0,sizeof(CadC[indiceCad-1].nome));
-                            printf("Nome do Cliente Excluido!\n\n");
-
-                            pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
-                            if(pf != NULL){
-                                salvarCad(pf);
-                                fclose(pf);
-                            }
-                            else{
-                                printf("Erro ao salvar cadastro!");
-                            }
-                            linhaCol(26,30);
-                            system("pause");
-
-                            break;
-                        case 2:
                             system("cls");
                             boxMenu();
                             box(13,28,19,97);
@@ -1478,83 +1451,35 @@ void TelaFunc(FILE *pf, char userFunc[], dadosVenda dadosIng[]){// tela do funci
                             system("pause");
 
                             break;
+                        case 2:
+                            system("cls");
+                            boxMenu();
+                            box(13,28,19,97);
+                            linhaCol(16,43);
+                            // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
+                            memset(&CadC[indiceCad-1].ender,0,sizeof(CadC[indiceCad-1].ender));
+                            printf("Endereco do Cliente Excluido!\n\n");
+
+                            pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
+                            if(pf != NULL){
+                                salvarCad(pf);
+                                fclose(pf);
+                            }
+                            else{
+                                printf("Erro ao salvar cadastro!");
+                            }
+                            linhaCol(26,30);
+                            system("pause");
+
+                            break;
                         case 3:
                             system("cls");
                             boxMenu();
                             box(13,28,19,97);
                             linhaCol(16,43);
                             // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
-                            memset(&CadC[indiceCad-1].cpf,0,sizeof(CadC[indiceCad-1].cpf));
-                            printf("CPF do Cliente Excluido!\n\n");
-
-                            pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
-                            if(pf != NULL){
-                                salvarCad(pf);
-                                fclose(pf);
-                            }
-                            else{
-                                printf("Erro ao salvar cadastro!");
-                            }
-                            linhaCol(26,30);
-                            system("pause");
-
-                            break;
-                        case 4:
-                            system("cls");
-                            boxMenu();
-                            box(13,28,19,97);
-                            linhaCol(16,43);
-                            // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
-                            memset(&CadC[indiceCad-1].ender,0,sizeof(CadC[indiceCad-1].ender));
-                            printf("Endereço do Cliente Excluido!\n\n");
-
-                            pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
-                            if(pf != NULL){
-                                salvarCad(pf);
-                                fclose(pf);
-                            }
-                            else{
-                                printf("Erro ao salvar cadastro!");
-                            }
-                            linhaCol(26,30);
-                            system("pause");
-
-                            break;
-                        case 5:
-                            system("cls");
-                            boxMenu();
-                            box(13,28,19,97);
-                            linhaCol(16,43);
-                            // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
                             memset(&CadC[indiceCad-1].email,0,sizeof(CadC[indiceCad-1].email));
-                            printf("E-mail do Cliente Excluido!\n\n");
-
-                            pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
-                            if(pf != NULL){
-                                salvarCad(pf);
-                                fclose(pf);
-                            }
-                            else{
-                                printf("Erro ao salvar cadastro!");
-                            }
-                            linhaCol(26,30);
-                            system("pause");
-
-                            break;
-                        case 6:
-
-                            system("cls");
-                            boxMenu();
-                            box(13,28,19,97);
-                            linhaCol(16,43);
-                            // menset serve para excluir os dados declarado, após a excluir o sizeof permite inserir novamente.
-                            memset(&CadC[indiceCad-1].nome,0,sizeof(CadC[indiceCad-1].nome));
-                            memset(&CadC[indiceCad-1].telefone,0,sizeof(CadC[indiceCad-1].telefone));
-                            memset(&CadC[indiceCad-1].cpf,0,sizeof(CadC[indiceCad-1].cpf));
-                            memset(&CadC[indiceCad-1].ender,0,sizeof(CadC[indiceCad-1].ender));
-                            memset(&CadC[indiceCad-1].email,0,sizeof(CadC[indiceCad-1].email));
-
-                            printf("Todos os Dados Foram Excluidos!\n\n");
+                            printf("e-mail do Cliente Excluido!\n\n");
 
                             pf = fopen("dadosC.csv", "w"); // salvando cadastro no arquivo
                             if(pf != NULL){
