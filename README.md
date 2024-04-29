@@ -1,4 +1,5 @@
 # Alan Turing Museum Project C
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Erick-nLemos/alan-turing-museum-project/blob/main/LICENSE)
 
 ## Projeto Integrado Multidisciplinar (PIM)
 
