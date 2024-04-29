@@ -20,3 +20,7 @@ O Projeto Integrado Multidisciplinar (PIM) é um trabalho realizado em equipe to
 Este trabalho envolve todas as disciplinas do semestre bem como a pesquisa de temas fora do escopo das disciplinas, porém que estão diretamente relacionados ao curso.
 
 Este projeto foi desenvolvido em C.
+
+## Como executar
+
+Para executar corretamente o projeto, basta executar o arquivo .exe na pasta executavel, também pode ser executado através de uma IDE compatível, como o Code::Blocks.
