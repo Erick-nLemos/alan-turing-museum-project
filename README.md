@@ -25,3 +25,6 @@ Este projeto foi desenvolvido em C.
 ## Como executar
 
 Para executar corretamente o projeto, basta executar o arquivo .exe na pasta executavel, também pode ser executado através de uma IDE compatível, como o Code::Blocks.
+O login de Funcionário já está definido
+Login: Funcionario
+Senha: alanTuring@2023
